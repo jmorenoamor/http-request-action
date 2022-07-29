@@ -42,6 +42,7 @@ jobs:
 |preventFailureOnNoResponse| Prevent this Action to fail if the request respond without an response. Use 'true' (string) as value to enable it ||
 |ignoreStatusCodes| Prevent this Action to fail if the request respond with one of the configured Status Codes. Example: '404,401' ||
 |httpsCA| Certificate authority as string in PEM format ||
+|insecure| Skip certificate validation, allowing insecure or expired ones |false|
 
 ### Response
 
