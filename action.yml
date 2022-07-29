@@ -50,6 +50,10 @@ inputs:
     httpsCA:
         description: 'Certificate authority as string in PEM format'
         required: false
+    insecure:
+        description: 'Skip certificate check'
+        required: false
+        default: 'false'
 outputs:
     response:
         description: 'HTTP Response Content'
