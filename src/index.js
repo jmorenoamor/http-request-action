@@ -28,8 +28,14 @@ const instanceConfig = {
   headers: { ...headers, ...customHeaders }
 }
 
+instanceConfig.httpsAgent = new https.Agent({})
+
 if (!!core.getInput('httpsCA')) {
-  instanceConfig.httpsAgent = new https.Agent({ ca: core.getInput('httpsCA') })
+  instanceConfig.httpsAgent.ca = core.getInput('httpsCA')
+}
+
+if (!!core.getInput('insecure')) {
+  instanceConfig.httpsAgent.rejectUnauthorized = false
 }
 
 if (!!core.getInput('username') || !!core.getInput('password')) {
