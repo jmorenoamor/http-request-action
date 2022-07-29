@@ -36,6 +36,7 @@ if (!!core.getInput('httpsCA')) {
 
 if (!!core.getInput('insecure')) {
   instanceConfig.httpsAgent.rejectUnauthorized = false
+  https.globalAgent.options.rejectUnauthorized = false
 }
 
 if (!!core.getInput('username') || !!core.getInput('password')) {
