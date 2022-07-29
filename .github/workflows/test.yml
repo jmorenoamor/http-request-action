@@ -68,6 +68,7 @@ jobs:
           url: 'https://postman-echo.com/post'
           method: 'POST'
           file: "${{ github.workspace }}/testfile.txt"
+          insecure: 'true'
 
       - name: Request an endpoint with self signed certificate
         uses: ./
